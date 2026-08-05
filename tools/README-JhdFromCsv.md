@@ -48,19 +48,14 @@ skipped.
 
 ## Building it on Windows
 
-PyInstaller cannot cross-compile, so the exe has to be built on Windows. Two
-ways, both producing the same file:
+PyInstaller cannot cross-compile, so the exe has to be built on Windows.
 
-**1. Build it yourself** — clone the repo, then double-click
-`tools\build_exe.bat`. It checks for Python, installs PyInstaller, runs the
-tests, builds, and smoke-tests the result. You end up with
-`dist\JhdFromCsv.exe`. The only prerequisite is Python 3.9+ on PATH
-(<https://www.python.org/downloads/> — tick "Add python.exe to PATH").
-
-**2. Let GitHub build it** — no Python needed at all. On the repo's **Actions**
-tab: **Build JhdFromCsv.exe** -> **Run workflow**, wait ~1 minute, then
-download the `JhdFromCsv-windows` artifact (a zip containing the exe, this
-README and the sample CSV).
+Clone the repo, then double-click `tools\build_exe.bat`. It checks for Python,
+installs PyInstaller, runs the tests, builds, and smoke-tests the result. You
+end up with `dist\JhdFromCsv.exe` — a single self-contained file you can copy
+anywhere; it needs nothing else from this repo. The only prerequisite is
+Python 3.9+ on PATH (<https://www.python.org/downloads/> — tick "Add python.exe
+to PATH" during setup).
 
 The exe is not code-signed, so the first launch shows a Windows SmartScreen
 warning — **More info** -> **Run anyway**.
